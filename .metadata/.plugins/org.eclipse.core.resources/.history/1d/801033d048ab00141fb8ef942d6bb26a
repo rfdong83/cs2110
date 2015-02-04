@@ -1,0 +1,54 @@
+
+public class LinkedList {
+	/** Head of the linked list */
+	private Node head;
+	private Node tail;
+	
+	public LinkedList() {
+	}
+
+	public void append(int i) {
+		if (head == null) {
+			Node n = new Node(i, null);
+			head = n;
+		}
+		else {
+			Node n = new Node(i, null);
+			tail.next = n;
+			tail = n;
+		}
+	}
+	
+	
+	
+
+	public class Node {
+		/** Value of this node */
+		private int value;
+
+		/** Next node after this, null if on tail */
+		private Node next;
+
+		/** Constructor: returns an instance of a Node 
+		 * @param v Integer value stored in this Node
+		 * @param s Node linked after this Node (null if it's the tail)
+		 */
+		public Node(int v, Node n) {
+
+			value = v;
+			next = n;
+		}
+
+		
+		public int getValue() {
+			return value;
+		}
+
+		
+		public Node next() {
+			return next;
+		}
+
+	}
+
+}
